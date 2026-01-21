@@ -960,9 +960,6 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
  */
 
 Error Main::setup(const char *execpath, int argc, char *argv[], bool p_second_phase) {
-	print_line("\n------------------------------------------------");
-    print_line("   >>> YUKI GODOT ENGINE START! <<<");
-    print_line("------------------------------------------------\n");
 	Thread::make_main_thread();
 	set_current_thread_safe_for_nodes(true);
 
