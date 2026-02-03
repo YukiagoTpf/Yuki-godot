@@ -224,6 +224,12 @@ ShaderTypes::ShaderTypes() {
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["ALPHA"] = ShaderLanguage::TYPE_FLOAT;
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["SCREEN_UV"] = constt(ShaderLanguage::TYPE_VEC2);
 
+	//common 
+	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["VERTEX_COLOR"] = constt(ShaderLanguage::TYPE_VEC4);
+	//toon light
+	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["TOON_SSS"] = constt(ShaderLanguage::TYPE_FLOAT);
+	shader_modes[RS::SHADER_SPATIAL].functions["light"].built_ins["TOON_ILM"] = constt(ShaderLanguage::TYPE_FLOAT);
+	
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].can_discard = true;
 	shader_modes[RS::SHADER_SPATIAL].functions["light"].main_function = true;
 
