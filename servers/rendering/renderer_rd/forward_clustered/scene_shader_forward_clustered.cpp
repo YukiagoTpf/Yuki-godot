@@ -800,6 +800,15 @@ void SceneShaderForwardClustered::init(const String p_defines) {
 		actions.renames["DIFFUSE_LIGHT"] = "diffuse_light_highp";
 		actions.renames["SPECULAR_LIGHT"] = "specular_light_highp";
 
+		actions.renames["VERTEX_COLOR"] = "vertex_color_varying";
+		actions.renames["TOON_SSS"] = "toon_sss_varying";
+		actions.renames["TOON_ILM"] = "toon_ilm_varying";
+
+
+		actions.usage_defines["VERTEX_COLOR"] = "#define VERTEX_COLOR_USED\n";
+		actions.usage_defines["TOON_SSS"] = "#define LIGHT_TOON_USED\n";
+		actions.usage_defines["TOON_ILM"] = "#define LIGHT_TOON_USED\n";
+
 		actions.usage_defines["NORMAL"] = "#define NORMAL_USED\n";
 		actions.usage_defines["TANGENT"] = "#define TANGENT_USED\n";
 		actions.usage_defines["BINORMAL"] = "@TANGENT";
